@@ -11,6 +11,9 @@ export const videos = pgTable("videos", {
     id: uuid("id").primaryKey().defaultRandom(),
     videoid: text("videoid").unique(),
     videotitle: text("videotitle"),
+    videodescription: text("videodescription"),
+    videothumbnail: text("videothumbnail"),
+    videoauthor: text("videoauthor"),
     transcript: text("transcript"),
     created_at: timestamp("created_at").defaultNow(),
 })
